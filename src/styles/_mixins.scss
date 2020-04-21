@@ -1,0 +1,113 @@
+
+@mixin det ($color, $font-size, $font-weight: 400) { 
+   color: $color;
+   font-size: $font-size;  
+   font-weight: $font-weight;
+}
+
+@mixin det1 ($color, $font-size, $font-family: $roboto) { 
+   color: $color;
+   font-size: $font-size;   
+   font-family: $font-family; 
+}
+ 
+@mixin anim($s:0.4s){
+  transition: all $s ease-in-out;
+  -webkit-transition: all $s ease-in-out;
+  -moz-transition: all $s ease-in-out;
+  -o-transition: all $s ease-in-out;
+  -ms-transition: all $s ease-in-out;
+}  
+
+@mixin trf-t ($x, $y) { 
+  -webkit-transform:translate($x, $y);
+     -moz-transform:translate($x, $y);
+      -ms-transform:translate($x, $y);
+       -o-transform:translate($x, $y);
+        transform:translate($x, $y);
+}
+
+@mixin trf-r ($angle) { 
+  -webkit-transform:rotate($angle);
+     -moz-transform:rotate($angle);
+      -ms-transform:rotate($angle);
+       -o-transform:rotate($angle);
+        transform:rotate($angle);
+}
+
+@mixin trf-r-3d ($x, $y, $z, $deg) {  
+  transform: rotate3d($x, $y, $z, $deg); 
+  -webkit-transform: rotate3d($x, $y, $z, $deg); 
+  -moz-transform: rotate3d($x, $y, $z, $deg); 
+  -ms-transform: rotate3d($x, $y, $z, $deg); 
+  -o-transform: rotate3d($x, $y, $z, $deg); 
+} 
+
+@mixin trf-s ($x, $y) { 
+  -webkit-transform:scale($x, $y);
+     -moz-transform:scale($x, $y);
+      -ms-transform:scale($x, $y);
+       -o-transform:scale($x, $y);
+        transform:scale($x, $y);
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+          border-radius: $radius;  
+} 
+ 
+@mixin box-shadow($top:0, $left:0, $blur:20px, $color:rgba(0,0,0,0.2), $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+ 
+@mixin gray($status: true) {
+  @if $status {
+    -webkit-filter: grayscale(1);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: url(#greyscale);
+    filter: gray;
+  } @else {
+    -moz-filter: grayscale(0); 
+    -webkit-filter: grayscale(0); 
+    filter: grayscale(0); 
+    filter: none;
+  }
+}   
+
+@mixin flex($hor:space-around,$ver:center) {
+
+  display:-webkit-flex;
+  display:-webkit-box;
+  display:-moz-flex;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:flex;
+  flex-direction:row;
+
+  justify-content: $hor;
+  align-items:$ver;
+}
+
+@mixin animation ($name, $duration: 300ms, $delay: 0, $ease: ease) {
+  -webkit-animation: $name $duration $delay $ease;
+  -moz-animation:    $name $duration $delay $ease;
+  -ms-animation:     $name $duration $delay $ease;
+}
+
+@for $i from 1 through 20 {
+  span:nth-child(#{$i}) {
+    // your Styles here
+  }
+}

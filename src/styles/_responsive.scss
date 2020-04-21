@@ -1,0 +1,149 @@
+
+// #########################################################################################
+// Responsive
+// ############
+
+@media (max-width: 1679px){
+}
+
+@media (max-width: 1600px){
+.container1 {width: 1170px; }
+
+
+}
+
+@media ( max-width:1400px ){
+
+}
+
+@media all and (max-width: 1200px) {
+.container1 {width: 955px; }
+
+
+}
+
+@media all and (max-width: 990px) {
+.container1 {width: 750px; }
+
+
+}
+
+
+@media all and (max-width: 768px) {
+.container1 {width: 100%; }
+
+}
+
+
+// @media all and (max-width: 640px) {
+  
+// }
+
+@media all and (max-width: 800px) {
+  .navigation__link--logo{ top: 22px !important; left: 22px !important; height: 53px; width: 40px !important; }
+  .navigation__link--close{
+      .menu-trigger { position: absolute; top: 22px; right: 32px; z-index: 2; cursor: pointer; width: 31px; height: 47px; display: block; z-index: 5; visibility: visible;
+      .menu-trigger-bar{ width: 32px; height: 2px; background: #fff; display: block; -webkit-transform: rotate(25deg); transform: rotate(25deg) ; position: absolute; top: 5px; left: 0; font-style: italic;
+          &::before{ width: 0px; height: 2px; background: #3f3f3f; content: ""; position: absolute; top: 0; left: 0; transition: all .3s ease-in-out; }
+      }
+      .menu-trigger-bar.middle { top: 20px; left: 0; &::before{left: auto; right: 0;} }
+      .menu-trigger-bar.bottom { top: 35px; left: 0; }
+    }
+    .menu-trigger.open{
+      .menu-trigger-bar {&::before{width: 40px;}}
+      .menu-trigger-bar.middle {left: 0px; }
+    }
+  }
+  .mobile-navigation{
+    .nav__links{visibility: hidden; display: none;}
+  }
+  .mobile-navigation{ position: relative; z-index: 5;
+    .socail__icon{position: absolute; width: 100%; height: 30px; bottom: 0; background: red;}
+    .nav__links{ visibility: visible; height: 100%;  width: 100%; display: flex; justify-content: center; align-items: center; flex-direction: column;
+      a{display: block; width: 100%; color: white; font-size: 20px; text-align: center; text-transform: uppercase; margin: 20px 0; letter-spacing: 8px;  font-family: Candara; position: relative;
+        &::after{content: ''; position: absolute; bottom: -25%; left: 50%; transform: translateX(-50%); width: 20%; height: 1px; background: gray;}
+        &:hover{ 
+          &::after {width: 10%}
+        }
+      }
+    }
+  }
+  .mobile-navigation.open{animation: menuBgOpenAnimation 1s ease; width: 100%; height: 100vh; background: transparent; .nav__links { visibility: visible; animation: menuOpenAnimation 2s ease; animation-delay: 2s; } }
+  .mobile-navigation.close{animation: menuBgCloseAnimation 1s ease; background: transparent; .nav__links { visibility: hidden; display: none; animation: menuCloseAnimation 1s ease; animation-delay: 5px;}}
+  .mobile-navigation.navigation--contact{.menu-trigger-bar{ background: #000;}}
+  .mobile-navigation.navigation--nviso, .mobile-navigation.navigation--lms{.menu-trigger{ background: #000; display: none;}}
+  .home__body{
+    .homepage {
+      .myImg{opacity: 0.3;}
+      .home__text{width: 100%;
+        h4{ font-size: 24px; margin: 0; padding: 0 32px; text-align: right; padding: 0 20px; line-height: 18px;}
+        p{text-align: right;  padding: 0 20px; span:last-child{margin-right: 0;}}
+        .anim-typewriter.blank:nth-child(11), .anim-typewriter.blank:nth-child(23){display: block; width: 100%;}
+      }
+      .home__heading__svg{bottom: 10%; left: 0%;}
+    }
+  }
+  .contact__body{
+    .contact__page {
+      .contact__box {flex-direction: column; height: 100vh; position: relative;
+        .image{display: block; position: absolute; z-index: 4; width: 100%; height: 30vh; top: 300px;}
+        .detail { margin: 0; padding:72px 2vh 20px 2vh; text-align: center;
+          h2{font-size: 24px; span:nth-child(1){font-size: 50px;}}
+          h3 { font-size: 14px; letter-spacing: 0.15rem; margin-bottom: 0; padding: 0; align-self: center; justify-content: center;
+            p{position: relative; margin: 0; padding: 0; border: none; bottom: -0.5vh; span{font-size: 14px;}} 
+          }
+          .socail{bottom: 6%; width: 100%; left: 50%; transform: translateX(-50%); h4{margin: 0px 0;} a{margin-right: 15px;} a:nth-child(6){margin-right: 0;}}
+        }
+      }
+    }
+  }
+  .about__body {
+    .about__page{
+      .section__part{ flex-direction: column;
+        h4{font-size: 40px; line-height: 30px; margin-left: 100px;}
+        h4:nth-child(2){font-size: 24px;}
+        .first_section{  width: 100%;}
+        .second_section{ width: 100%;}
+        .third_section{  width: 100%; background-size: contain;}
+      }
+      .more_btn {bottom: 0; right: -30px; transform: none; img{width: 12%; margin-bottom: 0;} span{color: #000;}}
+    }
+  }
+  .aboutdetail__body{
+    .about__detail__page .section__part{flex-direction: column;
+      .first_section { width: 100%; background-size: cover; background-position-x: 0; background-position-y: -140px; width: 100%; margin-left: 0; padding-left: 0;
+        // justify-content: flex-end;
+        h4{font-size: 40px; line-height: 30px; width: 100%; text-align: center; }
+        h4:nth-child(2){font-size: 24px;}
+      }
+      .second_section{ flex : 2.5; padding-left: 30px;
+        .partition__section{flex-direction: column; 
+          h4{margin-top: 8px; 
+            &::after{top: -20px; width: 100px; height: 1px;}
+          }
+          .section__detail{padding-right: 30px; 
+            p{font-size: 12px; letter-spacing: 0.5px; margin: 4px 0;}
+            h3 span{ display: block; width: 100%; font-size: 12px; opacity: 0.2; font-weight: 600;}
+          }
+        }
+      }
+    }
+  }
+
+  .portfolio__body .portfolio__page .projects__slide .swiper-slide h2{font-size: 44px;}
+  .portfolio__body .portfolio__page .projects__slide .swiper-slide .project__list{width: 90%;}
+  .lms__body, .nviso__body {
+    header .mobile-navigation .navigation__link--contact{right: 32px;}
+    .nviso__detail__page, .lms__detail__page {
+      .section__part .second_section { padding: 40px;
+        .partition__section { flex-direction: column; margin-top: 100px;
+          .title__section .heading h4{font-size: 26px;}
+          .section__detail {
+            p { font-size: 12px; line-height: 25px; }
+          }
+        }
+      }
+    }
+  }
+}
+
